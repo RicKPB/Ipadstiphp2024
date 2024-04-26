@@ -1,4 +1,7 @@
 <?php
+    // acessp a dados usando retorno (matriz de dados)
+    // diretamente da tabela/banco de dados
+
     include 'conexao.php';
     $sql = "select * from departamento;";
     $con = Conexao::conectar(); 
@@ -6,7 +9,7 @@
 ?>
 
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
