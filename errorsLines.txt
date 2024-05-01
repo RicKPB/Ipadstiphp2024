@@ -42,3 +42,26 @@
 
 </body>
 </html>
+
+
+
+---------------------------------------------------------------------
+
+
+<?php
+    
+    include_once 'C:\xampp\htdocs\Ipadstiphp2024\DAL\conexao.php';
+    include_once 'C:\xampp\htdocs\Ipadstiphp2024\MODEL\Departamento.php';
+
+    $sql = 'Select *  from departamento;';
+    $con = \DAL\Conexao::conectar();
+    $lstDpto = $con->query($sql);
+    $con =\DAL\Conexao::desconectar();
+
+    foreach ($lstDpto as $linha){
+        $dpto = new \MODEL\Departamento();
+        $dpto->setId($linha['id']);
+        $dpto->setDescricao($linha['descricao']);
+        $lstDpto[] = $dpto;
+    }
+?>

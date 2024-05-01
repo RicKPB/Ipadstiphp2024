@@ -1,4 +1,8 @@
 <?php
+
+    namespace  DAL;
+    use  PDO;
+
    class Conexao {
     private static $dbNome ='laboratorio'; 
     private static $dbHost = 'localhost';
@@ -13,6 +17,7 @@
     }
 
     public static function conectar(){
+        
         if (self::$cont == null){
             try{
               // self::$cont = new PDO("mysql:host=localhost;dbname=laboratorio", "root", "");
@@ -28,6 +33,7 @@
 
     public static function desconectar (){
         self::$cont = null; 
+        return self::$cont;
     }
 
    }

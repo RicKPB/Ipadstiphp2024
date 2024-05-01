@@ -1,11 +1,10 @@
 <?php
-    // acessp a dados usando retorno (matriz de dados)
-    // diretamente da tabela/banco de dados
-
-    include 'conexao.php';
-    $sql = "select * from departamento;";
-    $con = Conexao::conectar(); 
-    $lstDpto = $con->query($sql); 
+    namespace VIEW\Departamento;
+    include_once 'C:\xampp\htdocs\Ipadstiphp2024\DAL\conexao.php';
+    $sql = 'select * from Departamento;';
+    $con = \DAL\Conexao::conectar();
+    $lstDpto = $con->query($sql);
+    $con = \DAL\Conexao::desconectar();
 ?>
 
 <!DOCTYPE html>

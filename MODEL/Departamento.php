@@ -8,7 +8,7 @@
         public function __construtor() {}
 
         public function getID(){
-            return this->id;
+            return $this->id;
         }
 
         public function setID(int $id){
@@ -16,7 +16,7 @@
         }
 
         public function getDescricao(){
-            return this->descricao;
+            return $this->descricao;
         }  
 
         public function setDescricao(string $descricao){
