@@ -19,7 +19,7 @@
             
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Listar Departamento usando Model</title>
+    <title>Listar Departamento usando DAL</title>
 </head>
 <body>
     <h1>Listar Departamento</h1>

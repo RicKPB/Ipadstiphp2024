@@ -9,8 +9,9 @@
         public function Select(){
 
             $sql = "Select * from departamento;"; 
-            $con = Conexao::conectar(); 
+            $con = \DAL\Conexao::conectar(); 
             $dados = $con->query($sql);
+            $con = \DAL\Conexao::desconectar(); 
   
             foreach ($dados as $linha){
                 $dpto = new \MODEL\Departamento(); 
